@@ -35,5 +35,6 @@ jobs:
           JFROG_URL: ${{ secrets.JFROG_URL }}
           JFROG_USERNAME: ${{ secrets.JFROG_USERNAME }}
           JFROG_PASSWORD: ${{ secrets.JFROG_PASSWORD }}
+          JFROG_REPO_NAME: ${{ secrets.JFROG_REPO_NAME }}
         run: |
-          curl -u $JFROG_USERNAME:$JFROG_PASSWORD -T src/target/*.jar $JFROG_URL/<repo-name>/path/to/artifact/
+          curl -u $JFROG_USERNAME:$JFROG_PASSWORD -T ./target/*.jar $JFROG_URL/$JFROG_REPO_NAME/path/to/artifact/
