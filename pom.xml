@@ -78,15 +78,18 @@
 							<goal>single</goal>
 						</goals>
 						<configuration>
+							<descriptorRefs>
+								<descriptorRef>jar-with-dependencies</descriptorRef>
+							</descriptorRefs>
+							<descriptors>
+								<descriptor>src/main/assembly/assembly.xml</descriptor>
+							</descriptors>
+							<fileName>${project.artifactId}-${project.version}</fileName>
 							<archive>
 								<manifest>
-									<mainClass>src.main.java.MainApplication</mainClass>
+									<mainClass>com.example.MyAppServiceApplication</mainClass>
 								</manifest>
 							</archive>
-							<fileName>${project.artifactId}-${project.version}</fileName>
-							<descriptorRefs>
-								<descriptorRef>src/main/resources/assembly.xml</descriptorRef>
-							</descriptorRefs>
 						</configuration>
 					</execution>
 				</executions>

@@ -12,6 +12,5 @@
                 <outputDirectory>target</outputDirectory>
                 <directory>${project.basedir}/src/**</directory>
             </fileSet>
-        </fileSet>
     </fileSets>
-        </assembly>
+</assembly>
